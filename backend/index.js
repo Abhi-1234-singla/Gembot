@@ -7,7 +7,7 @@ dotenv.config();
 const app = express()
 
 // using middleware
-app.use(express.json());
+app.use(express.json()); 
 
 // importing routes
 import userRoutes from './routes/userRoutes.js'

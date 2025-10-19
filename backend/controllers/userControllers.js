@@ -22,7 +22,7 @@ export const loginUser = async(req, res) => {
 
         const verifyToken = JsonWebTokenError.sign({user, otp}, process.env.Activation_sec,
             {
-                exporesIn: "5m",
+                expiresIn: "5m",
             });
 
             await sendMail(email, "GemBot", otp);
