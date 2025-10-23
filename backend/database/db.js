@@ -1,14 +1,15 @@
 import mongoose from "mongoose";
 
 const connectDb = async () => {
-    try{
+    try {
         await mongoose.connect(process.env.Db_url, {
             dbName: "ChatbotYoutube",
-        })
+        });
         console.log("Mongodb connected successfully");
-    }catch(error){
+    } catch (error) {
         console.error("MongoDB Connection Failed:", error);
+        process.exit(1);
     }
 };
 
-export default connectDb
+export default connectDb;
