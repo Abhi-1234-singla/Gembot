@@ -22,8 +22,14 @@ export const ChatProvider = ({ children }) => {
         setNewRequestLoading(true);
         setPrompt("")
         try {
+            const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+            if (!apiKey) {
+                toast.error("Google API key is not configured");
+                setNewRequestLoading(false);
+                return;
+            }
             const response = await axios({
-                url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA-kmwi3VlurII3TU50Y7grS5zwvvPcMlQ",
+                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
                 method: "post",
                 data: {
                     contents: [{ parts: [{ text: currentPrompt }] }],

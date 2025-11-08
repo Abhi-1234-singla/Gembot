@@ -15,23 +15,3 @@ function Header() {
 
 export default Header
 
-// AIzaSyA-kmwi3VlurII3TU50Y7grS5zwvvPcMlQ
-
-
-/*
-curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent" \
-  -H 'Content-Type: application/json' \
-  -H 'X-goog-api-key: AIzaSyA-kmwi3VlurII3TU50Y7grS5zwvvPcMlQ' \
-  -X POST \
-  -d '{
-    "contents": [
-      {
-        "parts": [
-          {
-            "text": "Explain how AI works in a few words"
-          }
-        ]
-      }
-    ]
-  }'
-*/
