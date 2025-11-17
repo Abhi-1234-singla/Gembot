@@ -1,4 +1,4 @@
-# 💎 GemBot  
+# 💎 GemBot
 GemBot is an intelligent AI-powered chatbot built using the **MERN Stack** and **Google Gemini API**, designed to deliver real-time, context-aware conversations through a clean and modern user interface.
 
 ---
@@ -17,17 +17,17 @@ GemBot is an intelligent AI-powered chatbot built using the **MERN Stack** and *
 
 ## 🛠️ Tech Stack
 
-**Frontend:**  
+### **Frontend**
 - React  
 - Tailwind CSS  
 - Axios  
 
-**Backend:**  
+### **Backend**
 - Node.js  
 - Express.js  
 - Google Gemini API  
 
-**Database:**  
+### **Database**
 - MongoDB (Mongoose)
 
 ---
@@ -58,29 +58,24 @@ GemBot/
 ## 🔧 Installation & Setup
 
 ### 1️⃣ Clone the Repository
-
 ```bash
 git clone https://github.com/your-username/GemBot.git
 cd GemBot
 ````
-
----
 
 ### 2️⃣ Install Frontend Dependencies
 
 ```bash
 cd client
 npm install
-
----
+```
 
 ### 3️⃣ Install Backend Dependencies
 
 ```bash
 cd ../server
 npm install
-
----
+```
 
 ### 4️⃣ Add Environment Variables
 
@@ -101,8 +96,6 @@ cd server
 npm start
 ```
 
----
-
 ### 6️⃣ Run Frontend App
 
 ```bash
@@ -116,12 +109,11 @@ npm start
 
 1. User sends a message from the React UI
 2. Request goes to Express backend
-3. Backend sends the prompt to **Google Gemini API**
+3. Backend sends the prompt to Google Gemini API
 4. Gemini responds with a generated answer
 5. UI displays the response in real time
 
 ---
-
 
 ## 🛡️ Environment Variables
 
@@ -142,9 +134,10 @@ cd client
 npm run build
 ```
 
-### Backend (Render/Express Deployment)
+### Backend Deployment (Render / Express)
 
-* Upload the build folder or serve static files through Express
+* Upload the `build/` folder or
+* Serve static frontend files using Express
 
 ---
 
@@ -163,6 +156,8 @@ This project is open-source and available under the **MIT License**.
 ## ⭐ Support
 
 If you like this project, give it a **star ⭐ on GitHub!**
+
+```
 
 ---
 
