@@ -5,7 +5,8 @@ import App from './App.jsx'
 import { UserProvider } from './context/UserContext.jsx'
 import { ChatProvider } from './context/chatContext.jsx'
 
-export const server = "import.meta.env.VITE_BACKEND_URL"
+const fallbackServer = 'http://localhost:5000'
+export const server = import.meta.env.VITE_BACKEND_URL?.trim() || fallbackServer
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
