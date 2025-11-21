@@ -1,23 +1,22 @@
-import jwt from "jsonwebtoken";
-import { User } from "../models/User.js";
+import jwt from 'jsonwebtoken'
 
-export const isAuth = async (req, res, next) => {
-  try {
-    const token = req.headers.token;
+export const isAuth = async(req, res, next) => {
+    try{
+        const token = req.headers.token;
 
-    if (!token)
-      return res.status(403).json({
-        message: "Please login",
-      });
+        if(!token)
+            return  res.status(403).json({
+            message: "Please Login"
+        });
 
-    const decode = jwt.verify(token, process.env.Jwt_sec);
+        const decode = jwt.verify(token, process.env.Jwt_sec);
 
-    req.user = await User.findById(decode._id);
+        req.user = await User.findById(decode._id);
 
-    next();
-  } catch (error) {
-    res.status(500).json({
-      message: "Login First",
-    });
-  }
-};
+        next();
+    } catch(error){
+        res.status(500).json({
+            message: "Login First"
+        })
+    }
+}
